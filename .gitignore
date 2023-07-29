@@ -64,3 +64,7 @@ yarn-error.log
 
 # testing
 /coverage
+.vscode/.react/debuggerWorker.js
+.vscode/.react/index.bundle
+.vscode/.react/index.map
+.vscode/.react/*
