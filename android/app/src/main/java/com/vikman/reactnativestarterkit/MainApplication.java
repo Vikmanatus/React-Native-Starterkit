@@ -1,4 +1,4 @@
-package com.reactnativestarterkit;
+package com.vikman.reactnativestarterkit;
 
 import android.app.Application;
 import com.facebook.react.PackageList;

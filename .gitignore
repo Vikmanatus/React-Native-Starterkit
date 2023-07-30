@@ -68,3 +68,5 @@ yarn-error.log
 .vscode/.react/index.bundle
 .vscode/.react/index.map
 .vscode/.react/*
+ios/GoogleService-Info.plist
+android/app/google-services.json
