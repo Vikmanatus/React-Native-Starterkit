@@ -19,6 +19,9 @@ PODS:
   - Firebase/Crashlytics (10.12.0):
     - Firebase/CoreOnly
     - FirebaseCrashlytics (~> 10.12.0)
+  - Firebase/DynamicLinks (10.12.0):
+    - Firebase/CoreOnly
+    - FirebaseDynamicLinks (~> 10.12.0)
   - FirebaseAnalytics (10.12.0):
     - FirebaseAnalytics/AdIdSupport (= 10.12.0)
     - FirebaseCore (~> 10.0)
@@ -53,6 +56,8 @@ PODS:
     - GoogleUtilities/Environment (~> 7.8)
     - nanopb (< 2.30910.0, >= 2.30908.0)
     - PromisesObjC (~> 2.1)
+  - FirebaseDynamicLinks (10.12.0):
+    - FirebaseCore (~> 10.0)
   - FirebaseInstallations (10.12.0):
     - FirebaseCore (~> 10.0)
     - GoogleUtilities/Environment (~> 7.8)
@@ -545,6 +550,11 @@ PODS:
     - FirebaseCoreExtension (= 10.12.0)
     - React-Core
     - RNFBApp
+  - RNFBDynamicLinks (18.3.0):
+    - Firebase/DynamicLinks (= 10.12.0)
+    - GoogleUtilities/AppDelegateSwizzler
+    - React-Core
+    - RNFBApp
   - SocketRocket (0.6.1)
   - Yoga (1.14.0)
 
@@ -592,6 +602,7 @@ DEPENDENCIES:
   - "RNFBAnalytics (from `../node_modules/@react-native-firebase/analytics`)"
   - "RNFBApp (from `../node_modules/@react-native-firebase/app`)"
   - "RNFBCrashlytics (from `../node_modules/@react-native-firebase/crashlytics`)"
+  - "RNFBDynamicLinks (from `../node_modules/@react-native-firebase/dynamic-links`)"
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
@@ -602,6 +613,7 @@ SPEC REPOS:
     - FirebaseCoreExtension
     - FirebaseCoreInternal
     - FirebaseCrashlytics
+    - FirebaseDynamicLinks
     - FirebaseInstallations
     - FirebaseSessions
     - fmt
@@ -698,6 +710,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/@react-native-firebase/app"
   RNFBCrashlytics:
     :path: "../node_modules/@react-native-firebase/crashlytics"
+  RNFBDynamicLinks:
+    :path: "../node_modules/@react-native-firebase/dynamic-links"
   Yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
@@ -712,6 +726,7 @@ SPEC CHECKSUMS:
   FirebaseCoreExtension: 0ce5ac36042001cfa233ce7bfa28e5c313cf80f4
   FirebaseCoreInternal: 950500ad8a08963657f6d8c67b579740c06d6aa1
   FirebaseCrashlytics: c4d111b7430c49744c74bcc6346ea00868661ac8
+  FirebaseDynamicLinks: 1a387da899779e5ef34f4d6f8bdba882f90d0e67
   FirebaseInstallations: 7b99ef103f013624444c614397038219c45f8e63
   FirebaseSessions: a4ee211eeb31a2224cd8d9d4e30a0fccde9aa00c
   fmt: ff9d55029c625d3757ed641535fd4a75fedc7ce9
@@ -759,6 +774,7 @@ SPEC CHECKSUMS:
   RNFBAnalytics: 72da412180980160a7648e2ce8e2fe5d6d1f837f
   RNFBApp: f0b5cf917b0b91a0ae890fbbaec0fb5d3285ea46
   RNFBCrashlytics: 7bb4840e45b15b56859c03afd8c3707e7a0eb2eb
+  RNFBDynamicLinks: 6f4468964b4c284374e1920bc1f82ede01e4db71
   SocketRocket: f32cd54efbe0f095c4d7594881e52619cfe80b17
   Yoga: 8796b55dba14d7004f980b54bcc9833ee45b28ce
 
