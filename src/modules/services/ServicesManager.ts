@@ -99,9 +99,7 @@ class ServicesManager {
         promises.push(service);
       }
     }
-    return Promise.all(promises).then(results => {
-      console.log({results});
-    });
+    return Promise.all(promises).then(_results => {});
   }
 }
 
