@@ -10,13 +10,13 @@
             ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
             <ActionContent
                title = "Copy appopriated .env file according to scheme"
-               scriptText = "# react-native-config step to make environment variables available in Build settings and Info.plist&#10;cp &quot;${PROJECT_DIR}/../.env.prod&quot; &quot;${PROJECT_DIR}/../.env&quot; &#10;">
+               scriptText = "# react-native-config step to make environment variables available in Build settings and Info.plist&#10;cp &quot;${PROJECT_DIR}/../.env.dev&quot; &quot;${PROJECT_DIR}/../.env&quot; &#10;">
                <EnvironmentBuildable>
                   <BuildableReference
                      BuildableIdentifier = "primary"
-                     BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-                     BuildableName = "ReactNativeStarterkit.app"
-                     BlueprintName = "ReactNativeStarterkit"
+                     BlueprintIdentifier = "EED194932A7E982800AF5A6C"
+                     BuildableName = "ReactNativeStarterkit-Development.app"
+                     BlueprintName = "ReactNativeStarterkit-Development"
                      ReferencedContainer = "container:ReactNativeStarterkit.xcodeproj">
                   </BuildableReference>
                </EnvironmentBuildable>
@@ -26,13 +26,13 @@
             ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
             <ActionContent
                title = "Generate XCode config file to make .env variables available in Build settings and Info.plist"
-               scriptText = "&quot;${SRCROOT}/../node_modules/react-native-config/ios/ReactNativeConfig/BuildXCConfig.rb&quot; &quot;${SRCROOT}/..&quot; &quot;${SRCROOT}/tmp.xcconfig&quot;&#10;">
+               scriptText = "&quot;${SRCROOT}/../node_modules/react-native-config/ios/ReactNativeConfig/BuildXCConfig.rb&quot; &quot;${SRCROOT}/..&quot; &quot;${SRCROOT}/tmp.xcconfig&quot;&#10;&#10;">
                <EnvironmentBuildable>
                   <BuildableReference
                      BuildableIdentifier = "primary"
-                     BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-                     BuildableName = "ReactNativeStarterkit.app"
-                     BlueprintName = "ReactNativeStarterkit"
+                     BlueprintIdentifier = "EED194932A7E982800AF5A6C"
+                     BuildableName = "ReactNativeStarterkit-Development.app"
+                     BlueprintName = "ReactNativeStarterkit-Development"
                      ReferencedContainer = "container:ReactNativeStarterkit.xcodeproj">
                   </BuildableReference>
                </EnvironmentBuildable>
@@ -48,9 +48,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "ReactNativeStarterkit.app"
-               BlueprintName = "ReactNativeStarterkit"
+               BlueprintIdentifier = "EED194932A7E982800AF5A6C"
+               BuildableName = "ReactNativeStarterkit-Development.app"
+               BlueprintName = "ReactNativeStarterkit-Development"
                ReferencedContainer = "container:ReactNativeStarterkit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -88,9 +88,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "ReactNativeStarterkit.app"
-            BlueprintName = "ReactNativeStarterkit"
+            BlueprintIdentifier = "EED194932A7E982800AF5A6C"
+            BuildableName = "ReactNativeStarterkit-Development.app"
+            BlueprintName = "ReactNativeStarterkit-Development"
             ReferencedContainer = "container:ReactNativeStarterkit.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -105,9 +105,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "ReactNativeStarterkit.app"
-            BlueprintName = "ReactNativeStarterkit"
+            BlueprintIdentifier = "EED194932A7E982800AF5A6C"
+            BuildableName = "ReactNativeStarterkit-Development.app"
+            BlueprintName = "ReactNativeStarterkit-Development"
             ReferencedContainer = "container:ReactNativeStarterkit.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

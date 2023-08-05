@@ -5,6 +5,12 @@
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
+    "android:dev": "ENVFILE=.env.dev react-native run-android --mode=DevelopmentDebug",
+    "android:staging": "ENVFILE=.env.staging react-native run-android  --mode=StagingDebug",
+    "android:prod": "ENVFILE=.env.prod react-native run-android  --mode=ProductionDebug",
+    "ios:dev": "ENVFILE=.env.dev react-native run-ios --scheme 'ReactNativeStarterkit-Development'",
+    "ios:staging": "ENVFILE=.env.staging react-native run-ios --scheme 'ReactNativeStarterkit-Staging'",
+    "ios:prod": "ENVFILE=.env.prod react-native run-ios --scheme 'ReactNativeStarterkit'",
     "lint": "eslint .",
     "start": "react-native start",
     "test": "jest",
@@ -14,9 +20,9 @@
     "@react-native-firebase/analytics": "^18.3.0",
     "@react-native-firebase/app": "^18.3.0",
     "@react-native-firebase/crashlytics": "^18.3.0",
-    "@react-native-firebase/dynamic-links": "^18.3.0",
     "react": "18.2.0",
-    "react-native": "0.72.3"
+    "react-native": "0.72.3",
+    "react-native-config": "^1.5.1"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",

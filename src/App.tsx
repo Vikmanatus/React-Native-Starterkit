@@ -1,41 +1,27 @@
 import React, {useEffect, useState} from 'react';
 import {Button, SafeAreaView, Text} from 'react-native';
 import crashlytics from '@react-native-firebase/crashlytics';
-import dynamicLinks from '@react-native-firebase/dynamic-links';
+import ServicesManager from './modules/services/ServicesManager';
+import Config from 'react-native-config';
 
 function App(): React.JSX.Element {
-  // const [isAppReady, setIsAppReady] = useState<boolean>(false);
-  const [isDynamicLink, setIsDynamicLink] = useState<boolean>(false);
-  // useEffect(() => {
-  //   new ServicesManager().init().then(() => {
-  //     setIsAppReady(true);
-  //     crashlytics().log('App mounted and business services initialized.');
-  //   });
-  // }, []);
+  const [isAppReady, setIsAppReady] = useState<boolean>(false);
   useEffect(() => {
-    dynamicLinks()
-      .getInitialLink()
-      .then(link => {
-        if (link?.url === 'https://www.allocine.fr/film') {
-          setIsDynamicLink(true);
-          // ...set initial route as offers screen
-        }
-      });
+    new ServicesManager().init().then(() => {
+      setIsAppReady(true);
+      crashlytics().log('App mounted and business services initialized.');
+      console.log('TEST: ', Config.ANDROID_PACKAGE_IDENTIFIER);
+      crashlytics().log('Env variable: ' + Config.FAKE_SENSITIVE_VALUE);
+      crashlytics().log('App ready to be used and initialized');
+    });
   }, []);
-  if (isDynamicLink) {
+  if (!isAppReady) {
     return (
       <SafeAreaView>
-        <Text>You have opened the app with the dynamic link</Text>
+        <Text>Initializing application</Text>
       </SafeAreaView>
     );
   }
-  // if (!isAppReady) {
-  //   return (
-  //     <SafeAreaView>
-  //       <Text>Initializing application</Text>
-  //     </SafeAreaView>
-  //   );
-  // }
   return (
     <SafeAreaView>
       <Text>Welcome to React-Native Starterkit</Text>
