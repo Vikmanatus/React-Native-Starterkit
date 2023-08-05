@@ -10,8 +10,9 @@ function App(): React.JSX.Element {
     new ServicesManager().init().then(() => {
       setIsAppReady(true);
       crashlytics().log('App mounted and business services initialized.');
+      console.log('TEST: ', Config.ANDROID_PACKAGE_IDENTIFIER);
       crashlytics().log('Env variable: ' + Config.FAKE_SENSITIVE_VALUE);
-      crashlytics().log('App ready to be used');
+      crashlytics().log('App ready to be used and initialized');
     });
   }, []);
   if (!isAppReady) {
