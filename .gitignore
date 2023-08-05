@@ -69,6 +69,7 @@ yarn-error.log
 .vscode/.react/index.map
 .vscode/.react/*
 ios/GoogleService-Info.plist
+.env
 .env.dev
 .env.prod
 .env.staging
