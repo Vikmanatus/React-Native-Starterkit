@@ -75,3 +75,5 @@ ios/GoogleService-Info.plist
 android/app/src/Development/google-services.json
 android/app/src/Production/google-services.json
 android/app/src/Staging/google-services.json
+# react-native-config codegen
+ios/tmp.xcconfig
