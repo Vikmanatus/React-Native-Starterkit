@@ -14,22 +14,22 @@
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		957EC4DDED8269DEB4B6547B /* Pods_ReactNativeStarterkit_ReactNativeStarterkitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90C167CC68B0FFD2E6700EC6 /* Pods_ReactNativeStarterkit_ReactNativeStarterkitTests.framework */; };
 		EA0B507FDDA4622862F7BD54 /* Pods_ReactNativeStarterkit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0D932E97251688FBC242B62 /* Pods_ReactNativeStarterkit.framework */; };
-		EE8D61E62A76B92500ACD33C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EE8D61E52A76B92500ACD33C /* GoogleService-Info.plist */; };
 		EED194802A7E97D300AF5A6C /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		EED194812A7E97D300AF5A6C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		EED194832A7E97D300AF5A6C /* Pods_ReactNativeStarterkit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0D932E97251688FBC242B62 /* Pods_ReactNativeStarterkit.framework */; };
 		EED194852A7E97D300AF5A6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		EED194862A7E97D300AF5A6C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
-		EED194872A7E97D300AF5A6C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EE8D61E52A76B92500ACD33C /* GoogleService-Info.plist */; };
 		EED194972A7E982800AF5A6C /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		EED194982A7E982800AF5A6C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		EED1949A2A7E982800AF5A6C /* Pods_ReactNativeStarterkit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0D932E97251688FBC242B62 /* Pods_ReactNativeStarterkit.framework */; };
 		EED1949C2A7E982800AF5A6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		EED1949D2A7E982800AF5A6C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
-		EED1949E2A7E982800AF5A6C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EE8D61E52A76B92500ACD33C /* GoogleService-Info.plist */; };
 		EED194AB2A7EA03300AF5A6C /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = EED194AA2A7EA03300AF5A6C /* Config.xcconfig */; };
 		EED194AC2A7EA03300AF5A6C /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = EED194AA2A7EA03300AF5A6C /* Config.xcconfig */; };
 		EED194AD2A7EA03300AF5A6C /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = EED194AA2A7EA03300AF5A6C /* Config.xcconfig */; };
+		EED194DA2A7EAFB100AF5A6C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EED194D92A7EAFB100AF5A6C /* GoogleService-Info.plist */; };
+		EED194DE2A7EAFFB00AF5A6C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EED194DD2A7EAFFB00AF5A6C /* GoogleService-Info.plist */; };
+		EED194E72A7EB13300AF5A6C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EED194E62A7EB13300AF5A6C /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,12 +60,14 @@
 		90C167CC68B0FFD2E6700EC6 /* Pods_ReactNativeStarterkit_ReactNativeStarterkitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReactNativeStarterkit_ReactNativeStarterkitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0D932E97251688FBC242B62 /* Pods_ReactNativeStarterkit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReactNativeStarterkit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		EE8D61E52A76B92500ACD33C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EED194912A7E97D300AF5A6C /* ReactNativeStarterkit-Staging.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ReactNativeStarterkit-Staging.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EED194922A7E97D400AF5A6C /* ReactNativeStarterkit-Staging-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "ReactNativeStarterkit-Staging-Info.plist"; path = "/Users/vikmanatus/Desktop/Projects/Open-Source/Starterkits/React-Native/ReactNativeStarterkit/ios/ReactNativeStarterkit-Staging-Info.plist"; sourceTree = "<absolute>"; };
 		EED194A82A7E982800AF5A6C /* ReactNativeStarterkit-Development.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ReactNativeStarterkit-Development.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EED194A92A7E982800AF5A6C /* ReactNativeStarterkit-Development-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "ReactNativeStarterkit-Development-Info.plist"; path = "/Users/vikmanatus/Desktop/Projects/Open-Source/Starterkits/React-Native/ReactNativeStarterkit/ios/ReactNativeStarterkit-Development-Info.plist"; sourceTree = "<absolute>"; };
 		EED194AA2A7EA03300AF5A6C /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		EED194D92A7EAFB100AF5A6C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Development/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EED194DD2A7EAFFB00AF5A6C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EED194E62A7EB13300AF5A6C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Staging/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EED23D582A76CF96006A9066 /* ReactNativeStarterkit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = ReactNativeStarterkit.entitlements; path = ReactNativeStarterkit/ReactNativeStarterkit.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -157,7 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				EED194AA2A7EA03300AF5A6C /* Config.xcconfig */,
-				EE8D61E52A76B92500ACD33C /* GoogleService-Info.plist */,
+				EED194C72A7EAC6900AF5A6C /* GoogleServices */,
 				13B07FAE1A68108700A75B9A /* ReactNativeStarterkit */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* ReactNativeStarterkitTests */,
@@ -192,6 +194,40 @@
 				89C6BE57DB24E9ADA2F236DE /* Pods-ReactNativeStarterkit-ReactNativeStarterkitTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		EED194C72A7EAC6900AF5A6C /* GoogleServices */ = {
+			isa = PBXGroup;
+			children = (
+				EED194E32A7EB07D00AF5A6C /* Staging */,
+				EED194DC2A7EAFDD00AF5A6C /* Production */,
+				EED194D82A7EAF9900AF5A6C /* Development */,
+			);
+			path = GoogleServices;
+			sourceTree = "<group>";
+		};
+		EED194D82A7EAF9900AF5A6C /* Development */ = {
+			isa = PBXGroup;
+			children = (
+				EED194D92A7EAFB100AF5A6C /* GoogleService-Info.plist */,
+			);
+			name = Development;
+			sourceTree = "<group>";
+		};
+		EED194DC2A7EAFDD00AF5A6C /* Production */ = {
+			isa = PBXGroup;
+			children = (
+				EED194DD2A7EAFFB00AF5A6C /* GoogleService-Info.plist */,
+			);
+			path = Production;
+			sourceTree = "<group>";
+		};
+		EED194E32A7EB07D00AF5A6C /* Staging */ = {
+			isa = PBXGroup;
+			children = (
+				EED194E62A7EB13300AF5A6C /* GoogleService-Info.plist */,
+			);
+			name = Staging;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -344,9 +380,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EED194AB2A7EA03300AF5A6C /* Config.xcconfig in Resources */,
+				EED194DE2A7EAFFB00AF5A6C /* GoogleService-Info.plist in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
-				EE8D61E62A76B92500ACD33C /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,9 +391,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EED194AC2A7EA03300AF5A6C /* Config.xcconfig in Resources */,
+				EED194E72A7EB13300AF5A6C /* GoogleService-Info.plist in Resources */,
 				EED194852A7E97D300AF5A6C /* LaunchScreen.storyboard in Resources */,
 				EED194862A7E97D300AF5A6C /* Images.xcassets in Resources */,
-				EED194872A7E97D300AF5A6C /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,9 +402,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EED194AD2A7EA03300AF5A6C /* Config.xcconfig in Resources */,
+				EED194DA2A7EAFB100AF5A6C /* GoogleService-Info.plist in Resources */,
 				EED1949C2A7E982800AF5A6C /* LaunchScreen.storyboard in Resources */,
 				EED1949D2A7E982800AF5A6C /* Images.xcassets in Resources */,
-				EED1949E2A7E982800AF5A6C /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
