@@ -11,6 +11,7 @@ function App(): React.JSX.Element {
       setIsAppReady(true);
       crashlytics().log('App mounted and business services initialized.');
       crashlytics().log('Env variable: ' + Config.FAKE_SENSITIVE_VALUE);
+      crashlytics().log('App ready to be used');
     });
   }, []);
   if (!isAppReady) {
