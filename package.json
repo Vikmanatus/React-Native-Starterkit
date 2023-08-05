@@ -11,6 +11,10 @@
     "postinstall": "bash etc/postinstall.sh"
   },
   "dependencies": {
+    "@react-native-firebase/analytics": "^18.3.0",
+    "@react-native-firebase/app": "^18.3.0",
+    "@react-native-firebase/crashlytics": "^18.3.0",
+    "@react-native-firebase/dynamic-links": "^18.3.0",
     "react": "18.2.0",
     "react-native": "0.72.3"
   },

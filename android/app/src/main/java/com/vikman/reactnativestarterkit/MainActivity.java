@@ -1,4 +1,4 @@
-package com.reactnativestarterkit;
+package com.vikman.reactnativestarterkit;
 
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;
