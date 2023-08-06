@@ -63,6 +63,7 @@
 		CC511778AF5A5F3B9E6CE292 /* Pods_ReactNativeStarterkit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReactNativeStarterkit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9F2106952CC41082007DD58 /* Pods-ReactNativeStarterkit-Staging.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeStarterkit-Staging.release.xcconfig"; path = "Target Support Files/Pods-ReactNativeStarterkit-Staging/Pods-ReactNativeStarterkit-Staging.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		EE72653C2A7FD2F400E2A6B0 /* ReactNativeStarterkit-DevelopmentDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "ReactNativeStarterkit-DevelopmentDebug.entitlements"; sourceTree = "<group>"; };
 		EED194912A7E97D300AF5A6C /* ReactNativeStarterkit-Staging.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ReactNativeStarterkit-Staging.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EED194922A7E97D400AF5A6C /* ReactNativeStarterkit-Staging-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "ReactNativeStarterkit-Staging-Info.plist"; path = "/Users/vikmanatus/Desktop/Projects/Open-Source/Starterkits/React-Native/ReactNativeStarterkit/ios/ReactNativeStarterkit-Staging-Info.plist"; sourceTree = "<absolute>"; };
 		EED194A82A7E982800AF5A6C /* ReactNativeStarterkit-Development.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ReactNativeStarterkit-Development.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -162,6 +163,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				EE72653C2A7FD2F400E2A6B0 /* ReactNativeStarterkit-DevelopmentDebug.entitlements */,
 				EED194AA2A7EA03300AF5A6C /* Config.xcconfig */,
 				EED194C72A7EAC6900AF5A6C /* GoogleServices */,
 				13B07FAE1A68108700A75B9A /* ReactNativeStarterkit */,
@@ -1205,7 +1207,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = ReactNativeStarterkit/ReactNativeStarterkit.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "ReactNativeStarterkit-DevelopmentDebug.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C7477XXG85;
