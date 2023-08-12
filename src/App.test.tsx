@@ -29,6 +29,14 @@ describe('App', () => {
       expect(getByText('Initializing application services')).toBeTruthy();
     });
   });
+  it('should render App correctly without universal links', async () => {
+    const {getByText} = render(<App />);
+    // Wait for the promise and state updates to be reflected in the UI
+    await waitFor(() => {
+      expect(getByText('Welcome to React-Native Starterkit')).toBeTruthy();
+    });
+  });
+
   it('should fake universal links implementation for Login Screen', async () => {
     const initialUrlMock = jest
       .spyOn(Linking, 'getInitialURL')
@@ -39,6 +47,32 @@ describe('App', () => {
     // Wait for the promise and state updates to be reflected in the UI
     await waitFor(() => {
       expect(getByText('Hello from Login screen')).toBeTruthy();
+    });
+  });
+
+  it('should fake universal links implementation for Profile Screen', async () => {
+    const initialUrlMock = jest
+      .spyOn(Linking, 'getInitialURL')
+      .mockResolvedValue(ALLOWED_LINKS.PROFILE_ENDPOINT);
+    expect(initialUrlMock).toHaveBeenCalled();
+
+    const {getByText} = render(<App />);
+    // Wait for the promise and state updates to be reflected in the UI
+    await waitFor(() => {
+      expect(getByText('Hello from Profile screen')).toBeTruthy();
+    });
+  });
+
+  it('should fake universal links implementation for News Screen', async () => {
+    const initialUrlMock = jest
+      .spyOn(Linking, 'getInitialURL')
+      .mockResolvedValue(ALLOWED_LINKS.NEWS_ENDPOINT);
+    expect(initialUrlMock).toHaveBeenCalled();
+
+    const {getByText} = render(<App />);
+    // Wait for the promise and state updates to be reflected in the UI
+    await waitFor(() => {
+      expect(getByText('Hello from News screen')).toBeTruthy();
     });
   });
 });
