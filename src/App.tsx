@@ -5,12 +5,14 @@ import ServicesManager from './modules/services/ServicesManager';
 import {LoginScreen} from './modules/login';
 import {ALLOWED_LINKS} from './types';
 import {ProfileScreen} from './modules/profile';
+import {NewsScreen} from './modules/news';
 
 function App(): React.JSX.Element {
   const [isAppReady, setIsAppReady] = useState<boolean>(false);
   const [isAppLink, setIsAppLink] = useState<boolean>(false);
   const [isLoginRequired, setIsLoginRequired] = useState<boolean>(false);
   const [isProfileRequired, setIsProfileRequired] = useState<boolean>(false);
+  const [isNewsRequired, setIsNewsRequired] = useState<boolean>(false);
   useEffect(() => {
     new ServicesManager().init().then(() => {
       setIsAppReady(true);
@@ -21,11 +23,16 @@ function App(): React.JSX.Element {
     Linking.getInitialURL().then(result => {
       if (result) {
         setIsAppLink(true);
-        if (result === ALLOWED_LINKS.AUTH_ENDPOINT) {
-          setIsLoginRequired(true);
-        }
-        if (result === ALLOWED_LINKS.PROFILE_ENDPOINT) {
-          setIsProfileRequired(true);
+        switch (result) {
+          case ALLOWED_LINKS.AUTH_ENDPOINT:
+            setIsLoginRequired(true);
+            break;
+          case ALLOWED_LINKS.PROFILE_ENDPOINT:
+            setIsProfileRequired(true);
+            break;
+          case ALLOWED_LINKS.NEWS_ENDPOINT:
+            setIsNewsRequired(true);
+            break;
         }
       }
     });
@@ -50,6 +57,9 @@ function App(): React.JSX.Element {
   }
   if (isAppReady && isAppLink && isProfileRequired) {
     return <ProfileScreen />;
+  }
+  if (isAppReady && isAppLink && isNewsRequired) {
+    return <NewsScreen />;
   }
   return (
     <SafeAreaView>

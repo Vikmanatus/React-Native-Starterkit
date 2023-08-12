@@ -29,6 +29,8 @@
                 <data android:scheme="https" />
                 <data android:host="react-native-starterkit-server-d7d64db0ace1.herokuapp.com" />
                 <data android:pathPattern="/api/auth" />
+                <data android:pathPattern="/api/profile" />
+                <data android:pathPattern="/api/news" />
             </intent-filter>
         </activity>
     </application>

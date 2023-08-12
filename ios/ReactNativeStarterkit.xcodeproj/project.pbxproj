@@ -14,7 +14,7 @@
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		C3CA36D2C2B510484DFE4085 /* Pods_ReactNativeStarterkit_Staging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99FA4E96B827C91E4FB7826E /* Pods_ReactNativeStarterkit_Staging.framework */; };
 		E5DCFD6EA005EF65C519F725 /* Pods_ReactNativeStarterkit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC511778AF5A5F3B9E6CE292 /* Pods_ReactNativeStarterkit.framework */; };
-		EA0B507FDDA4622862F7BD54 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
+		EA0B507FDDA4622862F7BD54 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; };
 		EED194802A7E97D300AF5A6C /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		EED194812A7E97D300AF5A6C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		EED194852A7E97D300AF5A6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
@@ -87,7 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA0B507FDDA4622862F7BD54 /* (null) in Frameworks */,
+				EA0B507FDDA4622862F7BD54 /* BuildFile in Frameworks */,
 				E5DCFD6EA005EF65C519F725 /* Pods_ReactNativeStarterkit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
