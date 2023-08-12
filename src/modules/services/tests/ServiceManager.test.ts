@@ -24,5 +24,14 @@ describe('ServicesManager', () => {
     expect(appService).toBeInstanceOf(AppService);
   });
 
-  // Tests for initService, getServices, etc.
+  it('should retrieve some services', () => {
+    const services = servicesManager.getServices(
+      ...[SERVICES.app, SERVICES.user],
+    );
+    const mockedResponse = {
+      [SERVICES.app]: new AppService(servicesManager),
+      [SERVICES.user]: new UserService(servicesManager),
+    };
+    expect(services).toStrictEqual(mockedResponse);
+  });
 });
