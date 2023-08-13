@@ -12,8 +12,12 @@
     "lint": "eslint .",
     "start": "react-native start",
     "test:unit": "jest",
-    "test:e2e:android:dev": "detox build --configuration android.emu.debug && detox test --configuration android.emu.debug",
-    "test:e2e:ios:dev": "detox build --configuration ios.sim.debug && detox test --configuration ios.sim.debug",
+    "test:e2e:android:dev": "detox build --configuration android.emu.dev.debug && detox test --configuration android.emu.dev.debug",
+    "test:e2e:android:staging": "detox build --configuration android.emu.staging.debug && detox test --configuration android.emu.staging.debug",
+    "test:e2e:android:prod": "detox build --configuration android.emu.prod.debug && detox test --configuration android.emu.prod.debug",
+    "test:e2e:ios:dev": "detox build --configuration ios.sim.dev.debug && detox test --configuration ios.sim.dev.debug",
+    "test:e2e:ios:staging": "detox build --configuration ios.sim.staging.debug && detox test --configuration ios.sim.staging.debug",
+    "test:e2e:ios:prod": "detox build --configuration ios.sim.prod.debug && detox test --configuration ios.sim.prod.debug",
     "postinstall": "bash etc/postinstall.sh"
   },
   "dependencies": {
