@@ -47,7 +47,9 @@ function App(): React.JSX.Element {
             application
           </Text>
         ) : (
-          <Text>Initializing application services</Text>
+          <Text testID="init-services-message">
+            Initializing application services
+          </Text>
         )}
       </SafeAreaView>
     );

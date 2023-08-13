@@ -3,8 +3,6 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "android": "react-native run-android",
-    "ios": "react-native run-ios",
     "android:dev": "ENVFILE=.env.dev react-native run-android --mode=DevelopmentDebug",
     "android:staging": "ENVFILE=.env.staging react-native run-android  --mode=StagingDebug",
     "android:prod": "ENVFILE=.env.prod react-native run-android  --mode=ProductionDebug",
@@ -13,7 +11,9 @@
     "ios:prod": "ENVFILE=.env.prod react-native run-ios --scheme 'ReactNativeStarterkit'",
     "lint": "eslint .",
     "start": "react-native start",
-    "test": "jest",
+    "test:unit": "jest",
+    "test:e2e:android:dev": "detox build --configuration android.emu.debug && detox test --configuration android.emu.debug",
+    "test:e2e:ios:dev": "detox build --configuration ios.sim.debug && detox test --configuration ios.sim.debug",
     "postinstall": "bash etc/postinstall.sh"
   },
   "dependencies": {
@@ -33,9 +33,12 @@
     "@testing-library/jest-native": "^5.4.2",
     "@testing-library/react-native": "^12.2.0",
     "@tsconfig/react-native": "^3.0.0",
+    "@types/detox": "^18.1.0",
+    "@types/jest": "^29.5.3",
     "@types/react": "^18.0.24",
     "@types/react-test-renderer": "^18.0.0",
     "babel-jest": "^29.2.1",
+    "detox": "^20.11.2",
     "eslint": "^8.19.0",
     "eslint-plugin-unused-imports": "^3.0.0",
     "jest": "^29.2.1",

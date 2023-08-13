@@ -9,6 +9,7 @@ buildscript {
 
         // We use NDK 23 which has both M1 support and is the side-by-side NDK version from AGP.
         ndkVersion = "23.1.7779620"
+        kotlinVersion = "1.8.0"
     }
     repositories {
         google()
@@ -19,5 +20,16 @@ buildscript {
         classpath 'com.google.gms:google-services:4.3.15'
         classpath("com.facebook.react:react-native-gradle-plugin")
         classpath 'com.google.firebase:firebase-crashlytics-gradle:2.9.2'
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion")
+    }
+
+    allprojects {
+        repositories {
+            google()
+                maven { // (4)
+                      url("$rootDir/../node_modules/detox/Detox-android")
+                }
+            maven { url 'https://www.jitpack.io' }
+        }
     }
 }
