@@ -8,6 +8,7 @@ const config: StorybookConfig = {
     '@storybook/addon-onboarding',
     '@storybook/addon-interactions',
     '@storybook/addon-react-native-web',
+    '@storybook/addon-actions',
   ],
   framework: {
     name: '@storybook/react-webpack5',

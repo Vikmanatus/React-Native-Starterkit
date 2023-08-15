@@ -1,6 +1,6 @@
-import {ButtonSizes} from '../../../types/styles';
 import Button from '../Button';
 import type {Meta, StoryObj} from '@storybook/react';
+import {action} from '@storybook/addon-actions';
 
 const meta: Meta<typeof Button> = {
   component: Button,
@@ -14,35 +14,13 @@ type Story = StoryObj<typeof Button>;
  * See https://storybook.js.org/docs/react/api/csf
  * to learn how to use render functions.
  */
-export const SmallButton: Story = {
-  name: 'I am the small button',
-  render: () => (
-    <Button
-      size={ButtonSizes.SMALL}
-      onPress={() => console.log('Cliked on small button')}
-      label="Click me"
-    />
-  ),
-};
-
-export const MediumButton: Story = {
-  name: 'I am the medium button',
-  render: () => (
-    <Button
-      size={ButtonSizes.MEDIUM}
-      onPress={() => console.log('Cliked on medium button')}
-      label="Click me"
-    />
-  ),
-};
-
-export const LargeButton: Story = {
-  name: 'I am the large button',
-  render: () => (
-    <Button
-      size={ButtonSizes.LARGE}
-      onPress={() => console.log('Cliked on large button')}
-      label="Click me"
-    />
-  ),
+export const DefaultButton: Story = {
+  name: 'Default button',
+  args: {
+    label: 'Default',
+    onPress: action('Button clicked', {
+      allowUndefined: false,
+      allowFunction: true,
+    }),
+  },
 };
