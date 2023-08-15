@@ -1,6 +1,6 @@
 module.exports = {
   root: true,
-  extends: ['@react-native'],
+  extends: ['@react-native', 'plugin:storybook/recommended'],
   plugins: ['unused-imports'],
   rules: {
     '@typescript-eslint/no-unused-vars': 'error',

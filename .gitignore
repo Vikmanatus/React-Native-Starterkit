@@ -81,3 +81,5 @@ ios/tmp.xcconfig
 ios/GoogleServices/Development/GoogleService-Info.plist
 ios/GoogleServices/Production/GoogleService-Info.plist
 ios/GoogleServices/Staging/GoogleService-Info.plist
+
+storybook-static
