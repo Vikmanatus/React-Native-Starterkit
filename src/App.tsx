@@ -1,11 +1,13 @@
 import React, {useEffect, useState} from 'react';
-import {Button, Linking, SafeAreaView, Text} from 'react-native';
+import {Linking, SafeAreaView, StyleSheet, Text, View} from 'react-native';
 import crashlytics from '@react-native-firebase/crashlytics';
 import ServicesManager from './modules/services/ServicesManager';
 import {LoginScreen} from './modules/login';
 import {ALLOWED_LINKS} from './types';
 import {ProfileScreen} from './modules/profile';
 import {NewsScreen} from './modules/news';
+import {Button} from './components';
+import {ButtonSizes} from './types/styles';
 
 function App(): React.JSX.Element {
   const [isAppReady, setIsAppReady] = useState<boolean>(false);
@@ -64,11 +66,27 @@ function App(): React.JSX.Element {
     return <NewsScreen />;
   }
   return (
-    <SafeAreaView>
+    <SafeAreaView style={styles.container}>
       <Text>Welcome to React-Native Starterkit</Text>
-      <Button title="Test Crash" onPress={() => crashlytics().crash()} />
+      <View style={styles.buttonContainer}>
+        <Button
+          size={ButtonSizes.LARGE}
+          label="Test Crash"
+          onPress={() => crashlytics().crash()}
+        />
+      </View>
     </SafeAreaView>
   );
 }
 
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  buttonContainer: {
+    paddingTop: 20,
+  },
+});
 export default App;
