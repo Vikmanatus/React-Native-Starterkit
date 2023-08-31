@@ -1,9 +1,22 @@
+import {ButtonSizes} from '../../../types/styles';
 import Button from '../Button';
 import type {Meta, StoryObj} from '@storybook/react';
-import {action} from '@storybook/addon-actions';
 
 const meta: Meta<typeof Button> = {
   component: Button,
+  argTypes: {
+    onPress: {
+      control: 'none',
+      description: 'Function launched when button is pressed',
+      type: 'function',
+    },
+    size: {
+      description: 'The size required for the button',
+    },
+    label: {
+      description: 'Label of the button',
+    },
+  },
 };
 
 export default meta;
@@ -18,9 +31,9 @@ export const DefaultButton: Story = {
   name: 'Default button',
   args: {
     label: 'Default',
-    onPress: action('Button clicked', {
-      allowUndefined: false,
-      allowFunction: true,
-    }),
+    size: ButtonSizes.SMALL,
+  },
+  parameters: {
+    controls: {expanded: true},
   },
 };

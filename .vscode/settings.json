@@ -4,6 +4,7 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
+  "mdx.experimentalLanguageServer": true,
   "eslint.validate": [
     "javascript",
     "javascriptreact",
