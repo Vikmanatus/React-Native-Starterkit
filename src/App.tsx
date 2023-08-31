@@ -9,6 +9,9 @@ import {NewsScreen} from './modules/news';
 import {Button} from './components';
 import {ButtonSizes} from './types/styles';
 
+/**
+ * App component
+ */
 function App(): React.JSX.Element {
   const [isAppReady, setIsAppReady] = useState<boolean>(false);
   const [isAppLink, setIsAppLink] = useState<boolean>(false);
@@ -70,8 +73,8 @@ function App(): React.JSX.Element {
       <Text>Welcome to React-Native Starterkit</Text>
       <View style={styles.buttonContainer}>
         <Button
-          size={ButtonSizes.LARGE}
           label="Test Crash"
+          size={ButtonSizes.LARGE}
           onPress={() => crashlytics().crash()}
         />
       </View>

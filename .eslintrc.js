@@ -1,7 +1,17 @@
 module.exports = {
   root: true,
-  extends: ['@react-native', 'plugin:storybook/recommended'],
-  plugins: ['unused-imports'],
+  extends: [
+    '@react-native',
+    'plugin:storybook/recommended',
+    'plugin:react-hooks/recommended',
+  ],
+  plugins: ['unused-imports', 'eslint-plugin-tsdoc', 'jsdoc'],
+  settings: {
+    react: {
+      pragma: 'React',
+      version: 'detect',
+    },
+  },
   rules: {
     '@typescript-eslint/no-unused-vars': 'error',
     '@typescript-eslint/no-explicit-any': 'error',
@@ -32,6 +42,55 @@ module.exports = {
             importNames: ['TouchableOpacity'],
             message: 'Import TouchableOpacity from react-native instead',
           },
+        ],
+      },
+    ],
+    'react/jsx-sort-props': [
+      'warn',
+      {
+        callbacksLast: true,
+        shorthandFirst: false,
+        shorthandLast: false,
+        reservedFirst: true,
+      },
+    ],
+    'padding-line-between-statements': [
+      'warn',
+      {blankLine: 'always', prev: 'function', next: 'function'},
+      {blankLine: 'always', prev: 'function', next: '*'},
+    ],
+    '@typescript-eslint/prefer-optional-chain': 'warn',
+    'react/jsx-handler-names': [
+      'warn',
+      {
+        checkLocalVariables: true,
+        eventHandlerPrefix: false,
+        eventHandlerPropPrefix: 'on',
+        checkInlineFunction: true,
+      },
+    ],
+    'tsdoc/syntax': 'warn',
+    'jsdoc/require-jsdoc': [
+      'warn',
+      {
+        publicOnly: {
+          cjs: true,
+          esm: true,
+          window: true,
+        },
+        require: {
+          ArrowFunctionExpression: true,
+          ClassDeclaration: true,
+          ClassExpression: true,
+          FunctionDeclaration: true,
+          FunctionExpression: true,
+          MethodDefinition: true,
+        },
+        contexts: [
+          'TSInterfaceDeclaration',
+          'TSTypeAliasDeclaration',
+          'TSEnumDeclaration',
+          'TSPropertySignature',
         ],
       },
     ],
