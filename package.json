@@ -23,6 +23,7 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "@react-native-community/blur": "^4.3.2",
     "@react-native-firebase/analytics": "^18.3.0",
     "@react-native-firebase/app": "^18.3.0",
     "@react-native-firebase/crashlytics": "^18.3.0",

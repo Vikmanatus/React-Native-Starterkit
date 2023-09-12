@@ -1,83 +1,51 @@
-import React, {useEffect, useState} from 'react';
-import {Linking, SafeAreaView, StyleSheet, Text, View} from 'react-native';
-import crashlytics from '@react-native-firebase/crashlytics';
-import ServicesManager from './modules/services/ServicesManager';
-import {LoginScreen} from './modules/login';
-import {ALLOWED_LINKS} from './types';
-import {ProfileScreen} from './modules/profile';
-import {NewsScreen} from './modules/news';
-import {Button} from './components';
-import {ButtonSizes} from './types/styles';
+import React, {useRef, useState} from 'react';
 
+import {
+  Animated,
+  Button,
+  Dimensions,
+  SafeAreaView,
+  StyleSheet,
+} from 'react-native';
+import {BlurView} from '@react-native-community/blur';
 /**
  * App component
  */
 function App(): React.JSX.Element {
-  const [isAppReady, setIsAppReady] = useState<boolean>(false);
-  const [isAppLink, setIsAppLink] = useState<boolean>(false);
-  const [isLoginRequired, setIsLoginRequired] = useState<boolean>(false);
-  const [isProfileRequired, setIsProfileRequired] = useState<boolean>(false);
-  const [isNewsRequired, setIsNewsRequired] = useState<boolean>(false);
-  useEffect(() => {
-    new ServicesManager().init().then(() => {
-      setIsAppReady(true);
-      crashlytics().log('App mounted and business services initialized.');
-    });
-  }, []);
-  useEffect(() => {
-    Linking.getInitialURL().then(result => {
-      if (result) {
-        setIsAppLink(true);
-        switch (result) {
-          case ALLOWED_LINKS.AUTH_ENDPOINT:
-            setIsLoginRequired(true);
-            break;
-          case ALLOWED_LINKS.PROFILE_ENDPOINT:
-            setIsProfileRequired(true);
-            break;
-          case ALLOWED_LINKS.NEWS_ENDPOINT:
-            setIsNewsRequired(true);
-            break;
-        }
-      }
-    });
-  }, []);
+  const screenHeight = Dimensions.get('window').height;
+  const drawerTranslateY = useRef(new Animated.Value(0)).current;
+  const [isExpanded, setIsExpanded] = useState(false);
+  const animateDrawer = () => {
+    const targetValue = isExpanded ? 0 : screenHeight - 50;
 
-  if (!isAppReady) {
-    return (
-      <SafeAreaView>
-        {isAppLink ? (
-          <Text>
-            Thanks for using universal links, we are initializing the
-            application
-          </Text>
-        ) : (
-          <Text testID="init-services-message">
-            Initializing application services
-          </Text>
-        )}
-      </SafeAreaView>
-    );
-  }
-  if (isAppReady && isAppLink && isLoginRequired) {
-    return <LoginScreen />;
-  }
-  if (isAppReady && isAppLink && isProfileRequired) {
-    return <ProfileScreen />;
-  }
-  if (isAppReady && isAppLink && isNewsRequired) {
-    return <NewsScreen />;
-  }
+    Animated.timing(drawerTranslateY, {
+      toValue: targetValue,
+      duration: 500, // 5 seconds for testing
+      useNativeDriver: true,
+    }).start(() => setIsExpanded(!isExpanded)); // Update state when animation finishes
+  };
+
   return (
     <SafeAreaView style={styles.container}>
-      <Text>Welcome to React-Native Starterkit</Text>
-      <View style={styles.buttonContainer}>
-        <Button
-          label="Test Crash"
-          size={ButtonSizes.LARGE}
-          onPress={() => crashlytics().crash()}
+      <Button title="Start Animation" onPress={animateDrawer} />
+
+      <Animated.View
+        pointerEvents="none"
+        style={[
+          styles.overlay,
+          {
+            opacity: drawerTranslateY.interpolate({
+              extrapolate: 'clamp',
+              inputRange: [0, screenHeight - 50],
+              outputRange: [0.7, 0],
+            }),
+          },
+        ]}>
+        <BlurView
+          blurAmount={20} // Static blurAmount
+          blurType="light"
         />
-      </View>
+      </Animated.View>
     </SafeAreaView>
   );
 }
@@ -86,10 +54,17 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'center',
   },
-  buttonContainer: {
-    paddingTop: 20,
+  overlay: {
+    ...StyleSheet.absoluteFillObject,
+    backgroundColor: '#000',
+  },
+  absoluteFill: {
+    position: 'absolute',
+    top: 0,
+    bottom: 0,
+    left: 0,
+    right: 0,
   },
 });
 export default App;
